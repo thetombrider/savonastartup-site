@@ -6,7 +6,7 @@ import { timeline } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Vision & Mission",
   description:
-    "Savona Startup nasce per riunire le energie imprenditoriali del territorio: dalla fondazione nel 2024 allo Startup Weekend, fino al progetto di uno spazio fisico.",
+    "Savona Startup nasce per riunire le energie imprenditoriali del territorio: dalla fondazione nel 2024 allo Startup Weekend, fino al coworking di via Paleocapa.",
   alternates: { canonical: "/vision" },
 };
 

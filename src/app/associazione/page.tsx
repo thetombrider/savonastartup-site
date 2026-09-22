@@ -11,13 +11,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "/associazione" },
 };
 
-const facts = [
-  { label: "Costituita", value: "Giugno 2024" },
-  { label: "Sede", value: "Savona" },
-  { label: "Forma", value: "APS" },
-  { label: "Registrazione", value: "Agenzia delle Entrate" },
-];
-
 export default function AssociazionePage() {
   return (
     <>
@@ -29,29 +22,18 @@ export default function AssociazionePage() {
 
       <section className="py-16 sm:py-20">
         <Container>
-          <dl className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {facts.map((fact) => (
-              <div key={fact.label} className="rounded-3xl bg-ice px-5 py-5">
-                <dt className="text-xs font-bold uppercase tracking-[0.14em] text-blue">
-                  {fact.label}
-                </dt>
-                <dd className="mt-2 text-lg font-bold text-ink">{fact.value}</dd>
-              </div>
-            ))}
-          </dl>
-
-          <div className="mt-12 flex flex-col items-start justify-between gap-6 rounded-[2rem] bg-blue px-6 py-8 text-white sm:flex-row sm:items-center sm:px-10">
-            <div>
-              <h2 className="text-2xl">Per associarti, o semplicemente saperne di più</h2>
-              <p className="mt-2 max-w-xl text-sm leading-relaxed text-ice">
+          <div className="flex flex-col items-center gap-6 rounded-[2rem] bg-blue px-5 py-8 text-center text-white sm:px-10 lg:flex-row lg:items-center lg:justify-between lg:text-left">
+            <div className="min-w-0">
+              <h2 className="text-2xl text-balance">Per associarti, o semplicemente saperne di più</h2>
+              <p className="mt-2 text-sm leading-relaxed text-ice">
                 Compila la richiesta di adesione. Se preferisci scriverci, siamo su{" "}
-                <a className="font-bold text-white underline underline-offset-2" href={`mailto:${links.email}`}>
+                <a className="break-all font-bold text-white underline underline-offset-2" href={`mailto:${links.email}`}>
                   {links.email}
                 </a>
                 .
               </p>
             </div>
-            <ButtonLink href={links.join} external variant="gold">
+            <ButtonLink href={links.join} external variant="gold" className="w-full max-w-xs shrink-0 lg:w-auto">
               Diventa Socio!
             </ButtonLink>
           </div>
@@ -63,7 +45,7 @@ export default function AssociazionePage() {
                 <h3 className="text-xl text-ink">{doc.title}</h3>
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{doc.text}</p>
                 <div className="mt-5">
-                  <ButtonLink href={doc.href} external variant="outline">
+                  <ButtonLink href={doc.href} external variant="outline" className="w-full sm:w-auto">
                     Download
                   </ButtonLink>
                 </div>

@@ -30,36 +30,36 @@ export default function HomePage() {
               esperienze e risorse. Entra anche tu nel mondo startup.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink href={links.join} external>
+              <ButtonLink href={links.join} external className="w-full sm:w-auto">
                 Entra in Savona Startup
               </ButtonLink>
-              <ButtonLink href="#eventi" variant="outline">
+              <ButtonLink href="#eventi" variant="outline" className="w-full sm:w-auto">
                 Prossimi eventi
               </ButtonLink>
             </div>
             <dl className="mt-10 grid grid-cols-3 gap-3 border-t border-blue/10 pt-6">
-              <div>
+              <div className="min-w-0">
                 <dt className="text-xs font-bold uppercase tracking-wider text-blue">Dal</dt>
                 <dd className="mt-1 text-lg font-bold text-ink">2024</dd>
               </div>
-              <div>
+              <div className="min-w-0">
                 <dt className="text-xs font-bold uppercase tracking-wider text-blue">Soci</dt>
                 <dd className="mt-1 text-lg font-bold text-ink">100+</dd>
               </div>
-              <div>
-                <dt className="text-xs font-bold uppercase tracking-wider text-blue">Forma</dt>
-                <dd className="mt-1 text-lg font-bold text-ink">APS</dd>
+              <div className="min-w-0">
+                <dt className="text-xs font-bold uppercase tracking-wider text-blue">Eventi</dt>
+                <dd className="mt-1 text-lg font-bold text-ink">15+</dd>
               </div>
             </dl>
           </div>
 
-          <div className="relative">
-            <div className="absolute -bottom-4 -left-3 h-28 w-28 rounded-3xl bg-gold" aria-hidden />
-            <div className="absolute -right-3 -top-4 h-20 w-20 rounded-full bg-ice" aria-hidden />
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-[0_30px_70px_-36px_rgba(0,97,168,0.65)] sm:aspect-[5/4] lg:aspect-[4/5]">
+          <div className="relative mx-auto w-full max-w-xl lg:max-w-none">
+            <div className="absolute -bottom-3 left-3 hidden h-24 w-24 rounded-3xl bg-gold sm:block" aria-hidden />
+            <div className="absolute -top-3 right-3 hidden h-16 w-16 rounded-full bg-ice sm:block" aria-hidden />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] shadow-[0_30px_70px_-36px_rgba(0,97,168,0.65)]">
               <Image
-                src="/images/events/work-by-the-sea.jpg"
-                alt="Persone al lavoro con il laptop su uno scoglio della costa ligure"
+                src="/images/hero/darsena.jpg"
+                alt="Barche ormeggiate nella darsena di Savona"
                 fill
                 priority
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -106,53 +106,51 @@ export default function HomePage() {
             <h2 className="mt-3 text-3xl text-ink sm:text-4xl">Prossimi eventi</h2>
           </div>
 
-          <article className="mt-10 overflow-hidden rounded-[2rem] bg-ice lg:grid lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="relative min-h-72">
+          <article className="mt-10 overflow-hidden rounded-[2rem] bg-ink text-white lg:grid lg:grid-cols-[0.82fr_1.18fr]">
+            <div className="flex items-center justify-center bg-white px-6 py-10 sm:px-10">
               <Image
-                src="/images/events/work-by-the-sea.jpg"
-                alt="Scorcio di mare e scogli, location di Work by the sea"
-                fill
-                sizes="(min-width: 1024px) 40vw, 100vw"
-                className="object-cover"
+                src="/images/events/startup-weekend.png"
+                alt="Startup Weekend Savona"
+                width={640}
+                height={360}
+                className="h-auto w-full max-w-sm"
               />
             </div>
             <div className="p-6 sm:p-10">
-              <p className="text-xs font-bold uppercase tracking-[0.16em] text-blue">17 – 18 aprile</p>
-              <h3 className="mt-2 text-3xl text-ink">Work by the sea</h3>
-              <p className="mt-3 text-lg font-bold leading-snug text-ink">
-                Due giorni per lavorare, connettersi ed entrare nell&apos;ecosistema locale.
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-gold">
+                Edizione 2026 · 4–6 dicembre
               </p>
-              <p className="mt-3 text-sm leading-relaxed text-muted">
-                In occasione dei nostri AperiFounder, apriamo le porte a chi vuole capire
-                dall&apos;interno cosa significa costruire un ecosistema startup in un territorio
-                come Savona — tra lavoro, natura e connessioni autentiche.
+              <h3 className="mt-2 text-3xl text-balance sm:text-4xl">Startup Weekend Savona</h3>
+              <p className="mt-3 text-lg font-bold leading-snug">
+                54 ore alla Fortezza del Priamar per trasformare un&apos;idea in startup.
               </p>
-              <ol className="mt-6 space-y-4">
-                <li className="rounded-2xl bg-white p-4">
-                  <h4 className="text-base text-blue">Venerdì 17</h4>
-                  <p className="mt-1 text-sm leading-relaxed text-muted">
-                    Porta il tuo laptop e lavora a due passi dal mare, insieme alla nostra
-                    community. Un momento informale per conoscere founder, professionisti e
-                    persone che stanno costruendo nuovi progetti.
+              <p className="mt-3 text-sm leading-relaxed text-white/80">
+                Tre giorni per pitchare un&apos;idea, formare un team, costruire un prototipo e
+                presentarlo a mentor e investitori.
+              </p>
+              <ol className="mt-6 space-y-3">
+                <li className="rounded-2xl bg-white/10 p-4">
+                  <h4 className="text-base text-gold">Venerdì 4</h4>
+                  <p className="mt-1 text-sm leading-relaxed text-white/80">
+                    Pitch delle idee e formazione dei team.
                   </p>
                 </li>
-                <li className="rounded-2xl bg-white p-4">
-                  <h4 className="text-base text-blue">Sabato 18</h4>
-                  <p className="mt-1 text-sm leading-relaxed text-muted">
-                    La giornata inizia all&apos;aria aperta — una corsa, un trekking o una
-                    camminata tra mare e natura. Il modo migliore per conoscersi davvero. Si
-                    conclude con il nostro AperiFounder: l&apos;evento mensile dedicato a startup,
-                    founder e innovatori.
+                <li className="rounded-2xl bg-white/10 p-4">
+                  <h4 className="text-base text-gold">Sabato 5</h4>
+                  <p className="mt-1 text-sm leading-relaxed text-white/80">
+                    Mentoring, validazione e prototipo.
+                  </p>
+                </li>
+                <li className="rounded-2xl bg-white/10 p-4">
+                  <h4 className="text-base text-gold">Domenica 6</h4>
+                  <p className="mt-1 text-sm leading-relaxed text-white/80">
+                    Pitch finale davanti alla giuria e aperitivo.
                   </p>
                 </li>
               </ol>
-              <p className="mt-5 text-sm font-bold text-ink">
-                Posti limitati. Pernottamento offerto. Porta solo curiosità, voglia di conoscere
-                — e magari un&apos;idea su cui stai lavorando.
-              </p>
               <div className="mt-6">
-                <ButtonLink href={links.applyEvent} external>
-                  Candidati ora
+                <ButtonLink href={links.startupWeekend} external className="w-full sm:w-auto">
+                  Iscriviti all&apos;edizione 2026
                 </ButtonLink>
               </div>
             </div>
@@ -203,14 +201,14 @@ export default function HomePage() {
             {partners.map((partner) => (
               <li
                 key={partner.name}
-                className="flex h-32 items-center justify-center rounded-3xl bg-white px-5 ring-1 ring-inset ring-blue/10"
+                className="flex h-28 min-w-0 items-center justify-center overflow-hidden rounded-3xl bg-white px-4 ring-1 ring-inset ring-blue/10 sm:h-32 sm:px-5"
               >
                 <Image
                   src={partner.src}
                   alt={partner.name}
                   width={280}
                   height={120}
-                  className="max-h-16 w-auto object-contain"
+                  className="h-14 w-full object-contain sm:h-16"
                 />
               </li>
             ))}

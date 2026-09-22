@@ -73,9 +73,9 @@ export const pillars = [
 
 export const recurringEvents = [
   {
-    cadence: "Ogni anno a dicembre",
+    cadence: "4–6 dicembre 2026",
     title: "Startup Weekend Savona",
-    text: "Stay tuned per l'edizione 2026.",
+    text: "54 ore alla Fortezza del Priamar per trasformare un'idea in startup.",
     href: links.startupWeekend,
     image: "/images/events/startup-weekend.png",
     cta: "Vai al sito",
@@ -104,8 +104,8 @@ export const partners = [
     src: "/images/partners/camera-di-commercio.png",
   },
   {
-    name: "Comune di Urbe",
-    src: "/images/partners/comune-di-urbe.jpg",
+    name: "Comune di Savona",
+    src: "/images/partners/comune-di-savona.png",
   },
   {
     name: "FILSE",
@@ -162,9 +162,9 @@ export const timeline = [
     text: "La seconda edizione savonese di Techstars Startup Weekend, un hackathon basato su un format internazionale e concentrato sullo sviluppo di idee imprenditoriali.",
   },
   {
-    date: "Q1 2026",
-    title: "Spazio fisico",
-    text: "Vogliamo aprire un luogo fisico utile ai soci e ai terzi come coworking, spazio eventi e corsi di formazione: una fucina di idee e di collaborazioni imprenditoriali.",
+    date: "Q2 2026",
+    title: "Coworking",
+    text: "Abbiamo aperto il coworking di via Paleocapa, in collaborazione con Filse: uno spazio per i soci, per lavorare insieme e far nascere collaborazioni.",
   },
 ] as const;
 
@@ -281,9 +281,8 @@ export const memberBenefits = [
     text: "Partecipa o contribuisci a organizzare eventi come AperiFounder e Startup Weekend Savona.",
   },
   {
-    title: "Spazi di innovazione",
-    text: "La possibilità di vivere spazi di aggregazione e sperimentazione tecnologica come coworking, fablab e makerspace.",
-    soon: true,
+    title: "Coworking",
+    text: "I soci possono accedere al coworking di via Paleocapa, uno spazio di lavoro condiviso aperto in collaborazione con Filse.",
   },
   {
     title: "Partecipazione",

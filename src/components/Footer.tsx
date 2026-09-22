@@ -6,7 +6,7 @@ import { links, navigation } from "@/lib/site";
 export function Footer() {
   return (
     <footer className="mt-auto bg-ink text-white">
-      <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr]">
+      <div className="mx-auto grid w-full min-w-0 max-w-6xl gap-10 px-5 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr]">
         <div>
           <div className="inline-flex rounded-2xl bg-white px-4 py-3">
             <Image
@@ -102,7 +102,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <p className="mx-auto w-full max-w-6xl px-5 py-4 text-xs text-white/70 sm:px-6">
+        <p className="mx-auto w-full max-w-6xl break-words px-5 py-4 text-xs leading-relaxed text-white/70 sm:px-6">
           Savona Startup APS · C.F. 92120520090 · P.IVA 01921960090 · {links.email}
         </p>
       </div>

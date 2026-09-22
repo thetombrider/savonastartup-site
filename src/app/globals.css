@@ -15,11 +15,17 @@
   color-scheme: light;
 }
 
+html {
+  overflow-x: clip;
+}
+
 body {
+  overflow-x: clip;
   background: #ffffff;
   color: var(--color-ink);
   font-family: var(--font-sans);
   font-weight: 400;
+  overflow-wrap: break-word;
 }
 
 h1,

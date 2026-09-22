@@ -29,15 +29,8 @@ export default function DiventaSocioPage() {
           </p>
           <ul className="mt-8 grid gap-4 md:grid-cols-2">
             {memberBenefits.map((benefit) => (
-              <li key={benefit.title} className="rounded-3xl bg-ice p-6">
-                <div className="flex flex-wrap items-center gap-2">
-                  <h3 className="text-xl text-ink">{benefit.title}</h3>
-                  {"soon" in benefit && benefit.soon ? (
-                    <span className="rounded-full bg-gold px-2.5 py-1 text-xs font-bold text-ink">
-                      Coming soon
-                    </span>
-                  ) : null}
-                </div>
+              <li key={benefit.title} className="min-w-0 rounded-3xl bg-ice p-6">
+                <h3 className="text-xl text-ink">{benefit.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted">{benefit.text}</p>
               </li>
             ))}
@@ -47,7 +40,7 @@ export default function DiventaSocioPage() {
 
       <section className="bg-white pb-16 sm:pb-24">
         <Container className="grid gap-6 lg:grid-cols-[1.3fr_0.7fr]">
-          <div className="rounded-[2rem] border border-blue/10 p-6 sm:p-10">
+          <div className="min-w-0 rounded-[2rem] border border-blue/10 p-6 sm:p-10">
             <h2 className="text-3xl text-ink">Perché abbiamo bisogno di te</h2>
             <p className="mt-4 leading-relaxed text-muted">
               La nostra missione è promuovere la cultura dell&apos;innovazione e colmare il
@@ -72,30 +65,30 @@ export default function DiventaSocioPage() {
             </p>
             <p className="mt-4 text-sm leading-relaxed text-muted">
               Puoi scriverci a{" "}
-              <a className="font-bold text-blue underline underline-offset-2" href={`mailto:${links.email}`}>
+              <a className="break-all font-bold text-blue underline underline-offset-2" href={`mailto:${links.email}`}>
                 {links.email}
               </a>{" "}
               o{" "}
-              <a className="font-bold text-blue underline underline-offset-2" href={`mailto:${links.emailAlt}`}>
+              <a className="break-all font-bold text-blue underline underline-offset-2" href={`mailto:${links.emailAlt}`}>
                 {links.emailAlt}
               </a>
               .
             </p>
           </div>
 
-          <aside className="h-fit rounded-[2rem] bg-blue p-6 text-white sm:p-8 lg:sticky lg:top-36">
+          <aside className="h-fit min-w-0 rounded-[2rem] bg-blue p-6 text-center text-white sm:p-8 lg:sticky lg:top-36 lg:text-left">
             <p className="text-xs font-bold uppercase tracking-[0.16em] text-ice">Quota associativa</p>
             <p className="mt-3 text-5xl text-gold">10€</p>
             <p className="mt-1 text-sm text-ice">all&apos;anno, stabilita dall&apos;Assemblea</p>
-            <p className="mt-6 text-lg font-bold leading-snug">
+            <p className="mt-6 text-lg font-bold leading-snug text-balance">
               Sii il cambiamento che vuoi vedere a Savona.
             </p>
             <p className="mt-3 text-sm leading-relaxed text-ice">
               Diventa socio di Savona Startup APS e aiutaci a trasformare il territorio in un polo
               per l&apos;imprenditorialità e l&apos;innovazione.
             </p>
-            <div className="mt-6">
-              <ButtonLink href={links.join} external variant="gold">
+            <div className="mt-6 flex justify-center lg:justify-start">
+              <ButtonLink href={links.join} external variant="gold" className="w-full max-w-xs">
                 Diventa Socio!
               </ButtonLink>
             </div>

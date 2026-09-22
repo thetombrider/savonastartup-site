@@ -200,15 +200,15 @@ function DesktopItem({ item, pathname }: { item: NavItem; pathname: string }) {
 
 function MobileLink({ item, pathname }: { item: NavItem; pathname: string }) {
   const active = itemIsCurrent(item, pathname);
-  const className = `flex min-h-11 items-center justify-between rounded-xl px-3 text-base font-bold ${
+  const className = `flex min-h-11 items-center justify-between gap-3 rounded-xl px-3 text-base font-bold ${
     active ? "bg-ice text-blue" : "text-ink hover:bg-ice"
   }`;
 
   if (item.external) {
     return (
       <a href={item.href} target="_blank" rel="noopener noreferrer" className={className}>
-        {item.label}
-        <ArrowUpRight />
+        <span>{item.label}</span>
+        <ArrowUpRight className="size-4 shrink-0" />
         <span className="sr-only"> (si apre in una nuova scheda)</span>
       </a>
     );

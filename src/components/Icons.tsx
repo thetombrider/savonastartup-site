@@ -2,6 +2,8 @@ type IconProps = { className?: string };
 
 const base = {
   viewBox: "0 0 24 24",
+  width: 24,
+  height: 24,
   fill: "none",
   stroke: "currentColor",
   strokeWidth: 1.75,

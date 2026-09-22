@@ -208,7 +208,7 @@ function MobileLink({ item, pathname }: { item: NavItem; pathname: string }) {
     return (
       <a href={item.href} target="_blank" rel="noopener noreferrer" className={className}>
         <span className="min-w-0">{item.label}</span>
-        <ArrowUpRight className="shrink-0" />
+        <ArrowUpRight className="size-4 shrink-0" />
         <span className="sr-only"> (si apre in una nuova scheda)</span>
       </a>
     );

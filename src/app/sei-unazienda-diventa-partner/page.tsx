@@ -65,26 +65,37 @@ export default function PartnerPage() {
             ))}
           </ul>
 
-          <div className="mt-8 grid gap-6 rounded-[2rem] bg-blue p-6 text-white sm:p-10 lg:grid-cols-[1.4fr_auto] lg:items-center">
-            <div>
-              <h2 className="text-3xl">Diventa nostro partner</h2>
-              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ice">
-                Vuoi supportare l&apos;innovazione a Savona? Scrivici per costruire una partnership
-                su misura per la tua azienda.
-              </p>
-              <p className="mt-4 text-sm">
-                <a className="font-bold text-white underline underline-offset-2" href={`mailto:${links.email}`}>
-                  {links.email}
-                </a>
-                <span className="mx-2 text-ice">·</span>
-                <a className="font-bold text-white hover:underline" href={`mailto:${links.emailAlt}`}>
-                  {links.emailAlt}
-                </a>
-              </p>
+          <div className="mt-8 overflow-hidden rounded-[2rem] bg-blue px-5 py-8 text-center text-white sm:px-10 sm:py-10 lg:text-left">
+            <div className="mx-auto flex w-full min-w-0 max-w-3xl flex-col items-center gap-6 lg:flex-row lg:items-center lg:justify-between">
+              <div className="min-w-0">
+                <h2 className="text-3xl text-balance">Diventa nostro partner</h2>
+                <p className="mt-3 text-sm leading-relaxed text-ice">
+                  Vuoi supportare l&apos;innovazione a Savona? Scrivici per costruire una partnership
+                  su misura per la tua azienda.
+                </p>
+                <p className="mt-4 flex flex-col items-center gap-1 text-sm lg:items-start">
+                  <a
+                    className="break-all font-bold text-white underline underline-offset-2"
+                    href={`mailto:${links.email}`}
+                  >
+                    {links.email}
+                  </a>
+                  <a
+                    className="break-all font-bold text-white underline underline-offset-2"
+                    href={`mailto:${links.emailAlt}`}
+                  >
+                    {links.emailAlt}
+                  </a>
+                </p>
+              </div>
+              <ButtonLink
+                href={`mailto:${links.email}`}
+                variant="gold"
+                className="w-full max-w-xs shrink-0 lg:w-auto"
+              >
+                Contattaci
+              </ButtonLink>
             </div>
-            <ButtonLink href={`mailto:${links.email}`} variant="gold">
-              Contattaci
-            </ButtonLink>
           </div>
         </Container>
       </section>

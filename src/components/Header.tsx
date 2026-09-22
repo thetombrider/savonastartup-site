@@ -60,7 +60,7 @@ export function Header() {
       }`}
     >
       <div className="h-1 bg-gold" />
-      <div className="mx-auto w-full max-w-6xl px-5 sm:px-6">
+      <div className="mx-auto w-full min-w-0 max-w-6xl px-5 sm:px-6">
         <div className="flex h-16 items-center gap-4">
           <Link href="/" className="shrink-0">
             <Image
@@ -200,15 +200,15 @@ function DesktopItem({ item, pathname }: { item: NavItem; pathname: string }) {
 
 function MobileLink({ item, pathname }: { item: NavItem; pathname: string }) {
   const active = itemIsCurrent(item, pathname);
-  const className = `flex min-h-11 items-center justify-between rounded-xl px-3 text-base font-bold ${
+  const className = `flex min-h-11 min-w-0 items-center justify-between gap-3 rounded-xl px-3 text-base font-bold ${
     active ? "bg-ice text-blue" : "text-ink hover:bg-ice"
   }`;
 
   if (item.external) {
     return (
       <a href={item.href} target="_blank" rel="noopener noreferrer" className={className}>
-        {item.label}
-        <ArrowUpRight />
+        <span className="min-w-0">{item.label}</span>
+        <ArrowUpRight className="shrink-0" />
         <span className="sr-only"> (si apre in una nuova scheda)</span>
       </a>
     );
@@ -216,7 +216,7 @@ function MobileLink({ item, pathname }: { item: NavItem; pathname: string }) {
 
   return (
     <Link href={item.href} aria-current={isCurrent(item.href, pathname) ? "page" : undefined} className={className}>
-      {item.label}
+      <span className="min-w-0">{item.label}</span>
     </Link>
   );
 }

@@ -25,7 +25,7 @@ export function ButtonLink({
   external = false,
   className = "",
 }: Props) {
-  const classes = `inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-bold transition-colors ${variants[variant]} ${className}`;
+  const classes = `inline-flex max-w-full min-h-11 items-center justify-center gap-2 rounded-full px-5 py-2.5 text-center text-sm font-bold transition-colors ${variants[variant]} ${className}`;
 
   if (external || href.startsWith("mailto:")) {
     return (

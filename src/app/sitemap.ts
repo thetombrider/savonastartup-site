@@ -8,10 +8,11 @@ const paths = [
   "/associazione",
   "/vision",
   "/organigramma",
+  "/dicono-di-noi",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date("2026-09-22");
+  const lastModified = new Date("2026-09-29");
   return paths.map((path) => ({
     url: `${siteUrl}${path}`,
     lastModified,

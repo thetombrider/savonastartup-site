@@ -38,6 +38,21 @@ export default function AssociazionePage() {
             </ButtonLink>
           </div>
 
+          <div className="mt-6 rounded-[2rem] border border-blue/10 p-6 sm:p-8 lg:flex lg:items-center lg:justify-between lg:gap-8">
+            <div className="min-w-0">
+              <h2 className="text-2xl text-ink">Dicono di noi</h2>
+              <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted">
+                La rassegna stampa: La Stampa, IVG, Savonanews e le altre testate che hanno raccontato
+                l&apos;associazione, lo Startup Weekend e il coworking di via Paleocapa.
+              </p>
+            </div>
+            <div className="mt-5 shrink-0 lg:mt-0">
+              <ButtonLink href="/dicono-di-noi" variant="outline" className="w-full sm:w-auto">
+                Vai alla rassegna
+              </ButtonLink>
+            </div>
+          </div>
+
           <h2 className="mt-14 text-3xl text-ink">Documenti</h2>
           <ul className="mt-6 grid gap-4 md:grid-cols-3">
             {documents.map((doc) => (

@@ -100,7 +100,7 @@ export const recurringEvents = [
 
 export const partners = [
   {
-    name: "Camera di Commercio Milano Monza Brianza Lodi",
+    name: "Camera di Commercio Riviere di Liguria – Imperia La Spezia Savona",
     src: "/images/partners/camera-di-commercio.png",
   },
   {

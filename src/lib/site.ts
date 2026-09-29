@@ -47,9 +47,9 @@ export const navigation: NavItem[] = [
     children: [
       { href: "/vision", label: "Vision & Mission" },
       { href: "/organigramma", label: "Organigramma" },
-      { href: "/dicono-di-noi", label: "Dicono di noi" },
     ],
   },
+  { href: "/dicono-di-noi", label: "Dicono di noi" },
   { href: links.events, label: "Eventi", external: true },
 ];
 

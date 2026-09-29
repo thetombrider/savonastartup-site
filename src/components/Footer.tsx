@@ -70,11 +70,6 @@ export function Footer() {
                 Organigramma
               </Link>
             </li>
-            <li>
-              <Link href="/dicono-di-noi" className="hover:text-gold">
-                Dicono di noi
-              </Link>
-            </li>
           </ul>
         </div>
 
